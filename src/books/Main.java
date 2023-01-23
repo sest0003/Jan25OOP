@@ -18,6 +18,7 @@ public class Main {
             printBookDetails(book);
         }
 
+        System.out.println("Hej");
 
 
 
