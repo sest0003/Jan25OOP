@@ -11,16 +11,18 @@ public class Main {
         books.add(new Book("Rome", "Rob Folk", 159));
 
         ArrayList<Movie> movies = new ArrayList<>();
-        books.add(new Book("Bobo", "Felix Rove", 195));
-        books.add(new Book("Rome", "Rob Folk", 159));
+        movies.add(new Movie("Huff!", "Drama", 99));
+        movies.add(new Movie("Puff!", "Action", 99));
+
 
         for (Book book : books) {
             printBookDetails(book);
         }
 
-        System.out.println("Hej");
 
-
+        for (Movie movie : movies) {
+            printMovieDetails(movie);
+        }
 
     }
 
