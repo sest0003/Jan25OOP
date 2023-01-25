@@ -2,9 +2,20 @@ package books;
 
 public class Movie {
 
-    String title;
-    String genre;
-    int price;
+    private String title;
+    private String genre;
+    private static int price;
+
+    public void printMovieDetails() {
+        System.out.println();
+        System.out.println("title: " + getTitle());
+        System.out.println();
+        System.out.println("Genre: " + getGenre());
+        System.out.println();
+        System.out.println("Price: " + getPrice() + "kr");
+        System.out.println();
+    }
+
 
     public Movie(String title, String genre, int price) {
         this.title = title;
@@ -28,7 +39,7 @@ public class Movie {
         this.genre = genre;
     }
 
-    public int getPrice() {
+    public static int getPrice() {
         return price;
     }
 

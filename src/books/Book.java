@@ -1,11 +1,25 @@
 package books;
 
+import java.util.ArrayList;
+
 public class
 Book {
 
-    public String title;
-   public String author;
-    public int price;
+    private String title;
+    private String author;
+    private int price;
+
+    public void printBookDetails() {
+        System.out.println();
+        System.out.println("Title: " + getTitle());
+        System.out.println();
+        System.out.println("Author: " + getAuthor());
+        System.out.println();
+        System.out.println("price: " + getPrice());
+        System.out.println();
+    }
+
+
 
     public Book(String title, String author, int price) {
         this.title = title;
@@ -36,4 +50,7 @@ Book {
     public void setPrice(int price) {
         this.price = price;
     }
+
+
+
 }
