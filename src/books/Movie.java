@@ -15,13 +15,19 @@ public class Movie {
         System.out.println();
     }
 
+    public Movie() {
+        this.title = title;
+        this.genre = genre;
+        this.price = price;
+        this.director = director;
+    }
+
 
     public Movie(String title, MovieGenre genre, int price, String director) {
         this.title = title;
         this.genre = genre;
         this.price = price;
         this.director = director;
-
     }
 
     public String getTitle() {
@@ -46,5 +52,14 @@ public class Movie {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", genre=" + genre +
+                ", price=" + price +
+                '}';
     }
 }
