@@ -1,9 +1,9 @@
 package books;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
-public class
-Book {
+public class Book {
 
     private String title;
     private String author;
@@ -12,13 +12,10 @@ Book {
     public void printBookDetails() {
         System.out.println();
         System.out.println("Title: " + getTitle());
-        System.out.println();
         System.out.println("Author: " + getAuthor());
-        System.out.println();
         System.out.println("price: " + getPrice());
         System.out.println();
     }
-
 
 
     public Book(String title, String author, int price) {
@@ -28,10 +25,12 @@ Book {
     }
 
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
@@ -51,6 +50,30 @@ Book {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book book)) return false;
 
+        if (price != book.price) return false;
+        if (!Objects.equals(title, book.title)) return false;
+        return Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = title != null ? title.hashCode() : 0;
+        result = 31 * result + (author != null ? author.hashCode() : 0);
+        result = 31 * result + price;
+        return result;
+    }
 }
