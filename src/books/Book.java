@@ -12,9 +12,7 @@ Book {
     public void printBookDetails() {
         System.out.println();
         System.out.println("Title: " + getTitle());
-        System.out.println();
         System.out.println("Author: " + getAuthor());
-        System.out.println();
         System.out.println("price: " + getPrice());
         System.out.println();
     }
@@ -27,11 +25,15 @@ Book {
         this.price = price;
     }
 
+
+
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 

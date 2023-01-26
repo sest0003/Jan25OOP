@@ -3,24 +3,25 @@ package books;
 public class Movie {
 
     private String title;
-    private String genre;
-    private static int price;
+    private MovieGenre genre;
+    private int price;
+    private String director;
 
     public void printMovieDetails() {
         System.out.println();
         System.out.println("title: " + getTitle());
-        System.out.println();
         System.out.println("Genre: " + getGenre());
-        System.out.println();
         System.out.println("Price: " + getPrice() + "kr");
         System.out.println();
     }
 
 
-    public Movie(String title, String genre, int price) {
+    public Movie(String title, MovieGenre genre, int price, String director) {
         this.title = title;
         this.genre = genre;
         this.price = price;
+        this.director = director;
+
     }
 
     public String getTitle() {
@@ -31,15 +32,15 @@ public class Movie {
         this.title = title;
     }
 
-    public String getGenre() {
+    public MovieGenre getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(MovieGenre genre) {
         this.genre = genre;
     }
 
-    public static int getPrice() {
+    public int getPrice() {
         return price;
     }
 
