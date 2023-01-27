@@ -1,4 +1,4 @@
-package books;
+package media;
 
 public enum MovieGenre {
 

@@ -1,21 +1,14 @@
-package books;
+package media;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
-public class Book {
+public class Book extends MediaProduct {
 
     private String title;
     private String author;
     private int price;
 
-    public void printBookDetails() {
-        System.out.println();
-        System.out.println("Title: " + getTitle());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("price: " + getPrice());
-        System.out.println();
-    }
+
 
 
     public Book(String title, String author, int price) {
@@ -42,13 +35,7 @@ public class Book {
         this.author = author;
     }
 
-    public int getPrice() {
-        return price;
-    }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {

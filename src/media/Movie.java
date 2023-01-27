@@ -1,21 +1,14 @@
-package books;
+package media;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
-public class Movie {
+public class Movie extends MediaProduct {
 
     private String title;
     private MovieGenre genre;
-    private int price;
 
-    public void printMovieDetails() {
-        System.out.println();
-        System.out.println("title: " + getTitle());
-        System.out.println("Genre: " + getGenre());
-        System.out.println("Price: " + getPrice() + "kr");
-        System.out.println();
-    }
+
+
 
     public Movie(String title, MovieGenre genre, int price) {
         this.title = title;
@@ -43,13 +36,7 @@ public class Movie {
         this.genre = genre;
     }
 
-    public int getPrice() {
-        return price;
-    }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {
