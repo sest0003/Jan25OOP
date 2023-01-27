@@ -25,6 +25,11 @@ public class Main {
             for (Movie m : movies) {
                 m.printMovieDetails();
             }
+
+
+            
+
+
         }
 
     }
